@@ -4,7 +4,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ReactNative, {
-  ListView,
   StyleSheet,
   View,
   NativeModules,
@@ -24,10 +23,6 @@ export default class SelectableSectionsListView extends Component {
     super(props, context);
 
     this.state = {
-      dataSource: new ListView.DataSource({
-        rowHasChanged: (row1, row2) => row1 !== row2,
-        sectionHeaderHasChanged: (prev, next) => prev !== next
-      }),
       offsetY: 0
     };
 
